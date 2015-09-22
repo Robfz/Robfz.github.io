@@ -101,6 +101,7 @@ And commit changes:
 
 ![1.9DeleteWeb2](/assets/noob/1.9DeleteWeb2.png)
 
-That's it! Our Noob Section from the course has ended. Continue with next post 'Basic Section'.
+That's it! Our Noob Section from the course has ended. Continue with next post [Basic Section][basic].
 
 [github]:   https://github.com/
+[basic]: 	{{page.next.url}}

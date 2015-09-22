@@ -138,6 +138,7 @@ They have native integration with Git. According to them: "You can push and pull
 
 You can get more information at [JetBrains][jetbrains].
 
+Hey! You made it this far, continue with our 'Intermediate Section' for more!
 
 [jetbrains]: https://www.jetbrains.com/
 [github]:   https://github.com/
