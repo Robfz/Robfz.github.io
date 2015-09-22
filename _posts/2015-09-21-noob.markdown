@@ -1,0 +1,106 @@
+---
+layout: post
+title:  Noob Section
+date:   2015-09-21 20:21:00
+categories: noob level
+---
+
+This is the first section of our course. We will cover the basic usage of [GitHub][guthub]'s web interface and some commands for local usage of Git.
+
+<h2>Creating an account</h2>
+
+Given that I had previous experience with [GitHub][github], I already had an account:
+
+![1.1Account](/assets/noob/1.1Account.png)
+
+But don't worry, the sign-up is really straight forward.
+
+<h2>Creating a new repository in GitHub</h2>
+
+To create a new repository, go to your [GitHub][github] home page (the cat at the top left corner) and click on “New Repository”:
+
+![1.2NewRepo](/assets/noob/1.2NewRepo.png)
+
+<h2>Creating a local repository in your computer</h2>
+
+To create a local repository, use the following command inside the folder where you want to create the repository:
+
+{% highlight ruby %}
+git init
+{% endhighlight %}
+
+![1.3LocalRepo](/assets/noob/1.3LocalRepo.png)
+
+<h2>Cloning a repository from GitHub</h2>
+
+To clone a repository from [GitHub][github] to your computer, go the Repository page and copy the HTTPS link, then enter the following command:
+
+{% highlight ruby %}
+git clone <HTTPS link>
+{% endhighlight %}
+
+![1.4Clone1](/assets/noob/1.4Clone1.png)
+
+<h2>Adding or deleting a file to your local repository</h2>
+
+Now lets add a file to our local repository.
+
+First, use any kind of editor to create a new file (code, plain text or something). I created a file named "plain.txt". To add it to the repository use:
+
+{% highlight ruby %}
+git add plain.txt
+{% endhighlight %}
+
+To verify that the file was succesfully added, use the following command:
+
+{% highlight ruby %}
+git status
+{% endhighlight %}
+
+![1.5AddLocal](/assets/noob/1.5AddLocal.png)
+
+If you want to remove the file use:
+
+{% highlight ruby %}
+git rm plain.txt
+{% endhighlight %}
+
+You can also use the `git status` command to verify the deletion:
+
+![1.6RemoveLocal](/assets/noob/1.6RemoveLocal.png)
+
+<h2>GitHub's web interface</h2>
+
+Now let's play a little with [GitHub][github]'s web interface.
+
+<h1>Adding a file</h1>
+
+To add a file to the repository from the the web interface, click on the '+' sign next to the name of the repository as shown in the image:
+
+![1.8CreateFileWeb](/assets/noob/1.8CreateFileWeb.png)
+
+Then select a name for the file, put some content in it, and click on the 'Commit' button.
+
+<h1>Editing a file</h1>
+
+You can modify the content of the file by clicking on it, and then click on the pencil icon as shown in the images:
+
+![1.7EditWeb1](/assets/noob/1.7EditWeb2.png)
+
+And:
+
+![1.7EditWeb2](/assets/noob/1.7EditWeb1.png)
+
+<h1>Deleting a file</h1>
+
+To delete a file from the web interface, select it and click on the trash icon:
+
+![1.9DeleteWeb1](/assets/noob/1.9DeleteWeb1.png)
+
+And commit changes:
+
+![1.9DeleteWeb2](/assets/noob/1.9DeleteWeb2.png)
+
+That's it! Our Noob Section from the course has ended. Continue with next post 'Basic Section'.
+
+[github]:   https://github.com/

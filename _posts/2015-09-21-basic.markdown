@@ -1,0 +1,143 @@
+---
+layout: post
+title:  Basic Section
+date:   2015-09-21 21:57:00
+categories: noob level
+---
+
+In this section, we will talk about some Git concepts, how to work with a remote Git server and some useful tools inside Git.
+
+<h2>The status of a repository</h2>
+
+We have already used the `git status` command to check for new or deleted files, but it has more uses.
+
+![1Status](/assets/basic/1Status.png)
+
+With `git status` we can check the state of our repository. The repository can be up-to-date, have untracked files, have unstaged changes, can be behind in terms of updates, have conflicts, etc.
+
+<h2>The log of a repository</h2>
+
+We can use the following command to access the log of our repository:
+
+{% highlight ruby %}
+git log
+{% endhighlight %}
+
+![2Log](/assets/basic/2Log.png)
+
+The `log` shows all commits done in the repository, with information of the changes, author and date. It is useful to get some quick information about the changes done to the repository.
+
+<h2>States of files</h2>
+
+Files in Git have 4 possible states:
+<ul>
+	<li>
+		Untracked: These files are not being tracked by Git (they were not present on last snapshot).
+	</li>
+	<br>
+	<li>
+		Tracked: These files are tracked by Git (they were present on last snapshot).
+		<ul>
+			<li>Unmodified: The file hasn't been modified since last snapshot.</li>
+			<li>Modified: The file has been modified since las snapshot.</li>
+			<li>Staged: Changes to the files are now ready to be commited.</li>
+		</ul>
+	</li>
+</ul>
+<br>
+
+![States](/assets/lifecycle.png)
+
+(More info at: http://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository)
+
+<h2>Pushing to the remote server</h2>
+
+Now that we have and idea of the possible states of a repository and files, it is time to have some fun with [GitHub][github].
+
+The term `push` refers to sending our local changes to the server. To push a commit use:
+
+{% highlight ruby %}
+git push
+{% endhighlight %}
+
+then enter your user and password.
+
+![4Push](/assets/basic/4Push.png)
+
+<h2>Pulling from the remote server</h2>
+
+We can see `pull` as the reverse function of `push`. Pulling refers to getting the changes from the server to our local repository. To pull use:
+
+{% highlight ruby %}
+git pull
+{% endhighlight %}
+
+![5Pull](/assets/basic/5Pull.png)
+
+Note that there were unstaged changes on the local repository, so they were first commited and then merged with the changes in the remote server. We will talk about this in the Intermediate Section.
+
+<h2>Tags</h2>
+
+Tags are basically names that we assign to commits. To add a tag we use the following command:
+
+{% highlight ruby %}
+git tag -a <tag-name> -m <description>
+{% endhighlight %}
+
+Example:
+
+![6Tags1](/assets/basic/6Tags1.png)
+
+![6Tags2](/assets/basic/6Tags2.png)
+
+As in the picture, the command `git show <tag-name>` gives us information on the tag and the commit associated with it.
+
+To `push` or `pull` tags use:
+
+{% highlight ruby %}
+git push --tags
+git pull --tags
+{% endhighlight %}
+
+![7TagsRemote](/assets/basic/7TagsRemote.png)
+
+<h2>Aliases</h2>
+
+We can use aliases to shorten out commands or give them more easy to remember names. To create aliases use the following command:
+
+{% highlight ruby %}
+git config --global alias.<new-alias> <command>
+{% endhighlight %}
+
+Examples:
+
+{% highlight ruby %}
+git config --global alias.co checkout
+git config --global alias.br branch
+git config --global alias.ci commit
+git config --global alias.st status
+{% endhighlight %}
+
+Note that `--global` makes the alias available in all local repositories.
+
+<h2>.gitignore - Ignoring files</h2>
+
+Sometimes we want to ignore files: for example, we may have a huge historical database that we are going to analyze. Our little, 500 GB database is not going to change, so letting Git ignore the database is going to be a relief.
+
+To let Git ignore files, we have to create a file named `.gitignore` in our repository folder. Once created, we can add file names to it, and these files will be ignored. It is also possible to write regular expressions to ignore certain files that match a pattern (compilation files, temp files, debugging files, etc).
+
+![9GitIgnore](/assets/basic/9GitIgnore.png)
+
+We can see that only the `.gitignore` file was added, and the `crap.data` was not.
+
+<h2>JetBrains IDEs and Git</h2>
+
+I have been Intellij IDEA for developing Java programs and PyCharm for Python scripts for quite some time now. I really like the features of this family of IDEs.
+
+They have native integration with Git. According to them: "You can push and pull local repositories, rebase, apply various merge strategies, highlight commits and much more."
+
+You can get more information at [JetBrains][jetbrains].
+
+
+[jetbrains]: https://www.jetbrains.com/
+[github]:   https://github.com/

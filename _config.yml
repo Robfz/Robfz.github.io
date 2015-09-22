@@ -1,0 +1,14 @@
+# Site settings
+title: Mastering GitHub - Semana i 2015
+email: robfz729@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  This page contains all the evidence of the course "Mastering GitHub",
+  taught by professor Ken Bauer during Semana i at Tec de Monterrey
+  Campus Guadalajara
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://yourdomain.com" # the base hostname & protocol for your site
+twitter_username: robertfze
+github_username:  Robfz
+
+# Build settings
+markdown: kramdown
