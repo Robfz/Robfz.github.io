@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Intermediate Section
-date:   2015-09-21 21:57:00
+date:   2015-09-22 12:16:00
 categories: noob level
 ---
 
