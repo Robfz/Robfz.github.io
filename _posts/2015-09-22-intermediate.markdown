@@ -108,5 +108,10 @@ Then we can see the commit history; collaboration is cool!
 
 ![AccPull4](/assets/intermediate/AccPull4.png)
 
+And we are finished. This Semana i course was way better than i tought.
+
+For more info on Git, I highly recommend the [Git Documentation][GitDoc]. Also than you professor Bauer, you were amazing these two days.
+
 [DiffMerge]: https://sourcegear.com/diffmerge/
 [TwoBitLabs]: http://twobitlabs.com/2011/08/install-diffmerge-git-mac-os-x/
+[GitDoc]: https://git-scm.com/doc
