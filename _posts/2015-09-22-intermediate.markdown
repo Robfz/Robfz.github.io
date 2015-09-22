@@ -36,7 +36,77 @@ git difftool Build-54..Build-55 file.m
 
 (Info taken from [Two Bit Labs][TwoBitLabs])
 
-Lets see an example:
+Lets see an example. I am going to modify the file `index.html` in my repository and run the command:
+
+{% highlight ruby %}
+git difftool index.html
+{% endhighlight %}
+
+![Diff1](/assets/intermediate/Diff1.png)
+
+A prompt will ask us if we want to start `DiffMerge`:
+
+![Diff2](/assets/intermediate/Diff2.png)
+
+Then we can use `git mergetool` to merge the files.
+
+<h2>Branching</h2>
+
+<h1>Forking</h1>
+
+The term `fork` refers to creating a copy of someone's else repository and work on it. To fork a repository:
+
+Navigate to the GitHub page of the project you want to fork and click on the `fork` button:
+
+![Fork1](/assets/intermediate/Fork1.png)
+
+And the magic kicks in:
+
+![Fork2](/assets/intermediate/Fork2.png)
+
+Lets clone our fork, make a modification to a file, commit the change and push them to the server:
+
+![Fork3](/assets/intermediate/Fork3.png)
+
+![Fork4](/assets/intermediate/Fork4.png)
+
+![Fork5](/assets/intermediate/Fork5.png)
+
+<h1>Pull requests</h1>
+
+Now that we have done some modifications on our fork, lets request the original author to merge our changes to her repository. This is called a `pull request`.
+
+To create a pull request, go to your forked repository and click on the little green button next to the branch button:
+
+![PullReq1](/assets/intermediate/PullReq1.png)
+
+You can see the changes done. Then click on 'Create pull request':
+
+![PullReq2](/assets/intermediate/PullReq2.png)
+
+Write a title for your `pull request` and a description:
+
+![PullReq3](/assets/intermediate/PullReq3.png)
+
+Then, you just have to wait for the author to accept or reject your request. In our case, our request was accepted!
+
+![PullReq4](/assets/intermediate/PullReq4.png)
+
+<h1>Accepting pull requests</h1>
+
+If someone forks a repository from us and makes a `pull request`, GitHub will notify us:
+
+![AccPull1](/assets/intermediate/AccPull1.png)
+
+We can review the changes and decide if we want to merge the changes in our repository:
+
+![AccPull2](/assets/intermediate/AccPull2.png)
+
+![AccPull3](/assets/intermediate/AccPull3.png)
+
+Then we can see the commit history; collaboration is cool!
+
+![AccPull4](/assets/intermediate/AccPull4.png)
 
 [DiffMerge]: https://sourcegear.com/diffmerge/
 [TwoBitLabs]: http://twobitlabs.com/2011/08/install-diffmerge-git-mac-os-x/
