@@ -5,7 +5,7 @@ date:   2015-09-21 20:21:00
 categories: noob level
 ---
 
-This is the first section of our course. We will cover the basic usage of [GitHub][guthub]'s web interface and some commands for local usage of Git.
+This is the first section of our course. We will cover the basic usage of [GitHub][github]'s web interface and some commands for local usage of Git.
 
 <h2>Creating an account</h2>
 
